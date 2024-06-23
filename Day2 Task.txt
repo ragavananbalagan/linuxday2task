@@ -1,0 +1,16 @@
+[ec2-user@ip-172-31-25-185 Ragavan]$ cd
+[ec2-user@ip-172-31-25-185 ~]$ mkdir permission
+[ec2-user@ip-172-31-25-185 ~]$ ls
+Ragavan     file02.txt  file04.txt  file06.txt  file08.txt  file10.txt  file12.txt  file14.txt  file16.txt  file18.txt  file20.txt
+file01.txt  file03.txt  file05.txt  file07.txt  file09.txt  file11.txt  file13.txt  file15.txt  file17.txt  file19.txt  permission
+[ec2-user@ip-172-31-25-185 ~]$ cd permission
+[ec2-user@ip-172-31-25-185 permission]$ touch demo.txt
+[ec2-user@ip-172-31-25-185 permission]$ cd demo.txt
+-bash: cd: demo.txt: Not a directory
+[ec2-user@ip-172-31-25-185 permission]$ chmod 764 demo.txt
+[ec2-user@ip-172-31-25-185 permission]$ ls
+demo.txt
+[ec2-user@ip-172-31-25-185 permission]$ ls -ld demo.txt
+-rwxrw-r--. 1 ec2-user ec2-user 0 Jun 23 17:06 demo.txt
+[ec2-user@ip-172-31-25-185 permission]$
+
